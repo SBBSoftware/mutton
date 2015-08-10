@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/SBBSoftware/mutton.svg?branch=master)](https://travis-ci.org/SBBSoftware/mutton)
 [![Code Climate](https://codeclimate.com/github/SBBSoftware/mutton/badges/gpa.svg)](https://codeclimate.com/github/SBBSoftware/mutton)
 
+
 Externalize your handlebar templates and render them from your server as a replacement to ERB, 
 and use them unchanged through Javascript on the client. Supports the entire handlebars specification. 
 Stop writing script tags and duplicating your work in ERB, every .hbs file can be served up 
