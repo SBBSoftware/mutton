@@ -18,11 +18,10 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
 
   # TODO: change dependencies to a reasonable version
-  s.add_dependency 'rails', '~> 4.2.3'
+  s.add_dependency 'rails', '~> 4.2'
   s.add_dependency 'execjs'
   s.add_dependency 'tilt'
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'poltergeist'
   s.add_development_dependency 'jquery-rails'
-  s.add_development_dependency 'rubocop'
 end
