@@ -296,6 +296,9 @@ by variable name.
 ###Contributing
 Yes please!
 1. Fork It
+
 2. Create a topic branch
+
 3. Push
+
 4. Submit a pull request
