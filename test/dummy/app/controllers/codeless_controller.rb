@@ -1,0 +1,2 @@
+class CodelessController < ApplicationController
+end
