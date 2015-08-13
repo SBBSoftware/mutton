@@ -1,4 +1,4 @@
-#Share Handlebar Templates Between Server and Client With Mutton
+#Share Handlebar Templates Between Server and Client With Rails
 
 [![Build Status](https://travis-ci.org/SBBSoftware/mutton.svg?branch=master)](https://travis-ci.org/SBBSoftware/mutton)
 [![Code Climate](https://codeclimate.com/github/SBBSoftware/mutton/badges/gpa.svg)](https://codeclimate.com/github/SBBSoftware/mutton)
