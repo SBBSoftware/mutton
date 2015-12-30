@@ -21,12 +21,19 @@ module Mutton
 
     initializer 'mutton.initialize', group: :all do |app|
       # must have sprockets or you're in trouble
-      fail('Sprockets Not Found. This version does not work without sprockets') unless app.assets
+      # TODO: no longer works with Rails 4.25, changing to test Sprockets module is loaded
+      # fail('Sprockets Not Found. This version does not work without sprockets') unless app.assets
+      fail('Sprockets Not Found. This version does not work without sprockets') unless Module.const_defined?('Sprockets')
+
       # set logger to rails logger
       Mutton.logger = Rails.logger
       # register with sprockets for hbs and handlebar files
-      app.assets.register_engine('.hbs', HandlebarsTemplateConverter, mime_type: 'application/javascript')
-      app.assets.register_engine('.handlebars', HandlebarsTemplateConverter, mime_type: 'application/javascript')
+      # Quick fix for Rails 4.25
+      Sprockets.register_engine('.hbs', HandlebarsTemplateConverter, mime_type: 'application/javascript')
+      Sprockets.register_engine('.handlebars', HandlebarsTemplateConverter, mime_type: 'application/javascript')
+      # TODO: below broken in Rails 4.25, changed to register through Sprockets
+      # app.assets.register_engine('.hbs', HandlebarsTemplateConverter, mime_type: 'application/javascript')
+      # app.assets.register_engine('.handlebars', HandlebarsTemplateConverter, mime_type: 'application/javascript')
       # register template handler with Rails
       ActionView::Template.register_template_handler(:hbs, :handlebars, Mutton::HandlebarsTemplateHandler)
       # TODO: dont register a diretory if it is already part of the sprockets path?
